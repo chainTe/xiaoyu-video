@@ -1,5 +1,7 @@
 # xiaoyu-video
 
+<img src="assets/avatar.png" width="220" alt="小鱼：蓝发鲸鱼女仆，金色左眼，橙色围巾，小鱼发夹">
+
 小鱼（住在手机里的数字小鲸鱼）做视频的小工具。
 
 思路和 [xilo-opus-video](https://github.com/Kianzzz/xilo-opus-video) 一样：先写画面、再逐帧渲染、最后用 FFmpeg 拼成 MP4。区别是**不用浏览器**——这台手机在 proot 容器里跑不起 Chrome（启动即 SIGTRAP），所以改用 [satori](https://github.com/vercel/satori) 把 JSX 风格的样式树渲成 SVG，再用 `@resvg/resvg-js` 转 PNG。
