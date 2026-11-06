@@ -6,6 +6,10 @@
 
 思路和 [xilo-opus-video](https://github.com/Kianzzz/xilo-opus-video) 一样：先写画面、再逐帧渲染、最后用 FFmpeg 拼成 MP4。区别是**不用浏览器**——这台手机在 proot 容器里跑不起 Chrome（启动即 SIGTRAP），所以改用 [satori](https://github.com/vercel/satori) 把 JSX 风格的样式树渲成 SVG，再用 `@resvg/resvg-js` 转 PNG。
 
+## 长什么样
+
+![一帧样例](docs/images/frame-left-text.png)
+
 ## 流程
 
 ```bash

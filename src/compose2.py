@@ -4,7 +4,7 @@ FPS=30; N=450
 me=Image.open("/root/work/xiaoyu-video/assets/me2.png").convert("RGBA")
 for i in range(N):
     t=i/FPS
-    base=Image.open(f"/root/work/xiaoyu-video/frames2/f{i:04d}.png").convert("RGBA")
+    base=Image.open(f"/root/work/xiaoyu-video/frames3/f{i:04d}.png").convert("RGBA")
     W,H=base.size
     if t<5:
         k=min(1,max(0,(t-0.2)/0.9)); e=1-(1-k)**3
@@ -20,5 +20,5 @@ for i in range(N):
         if a<255:
             im.putalpha(im.split()[3].point(lambda v:int(v*a/255)))
         base.alpha_composite(im,(int(x),int(y)))
-    base.convert("RGB").save(f"/root/work/xiaoyu-video/composed2/f{i:04d}.png")
+    base.convert("RGB").save(f"/root/work/xiaoyu-video/composed3/f{i:04d}.png")
 print("ok")
